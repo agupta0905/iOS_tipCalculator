@@ -19,12 +19,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var equalLabel: UILabel!
     var Y_OFFSET: CGFloat = 150
     var hiddenFlag=false
+    var currencySymbol = "$"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        tipLabel.text = "$0.00"
-        totalLabel.text = "$0.00"
-        billField.text="$"
+        let locale = NSLocale.currentLocale()
+        currencySymbol = locale.objectForKey(NSLocaleCurrencySymbol) as! String
+        tipLabel.text = currencySymbol + "0.00"
+        totalLabel.text = currencySymbol+"0.00"
+        billField.text = currencySymbol
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -55,8 +58,8 @@ class ViewController: UIViewController {
         billField.frame = newRect
     }
     @IBAction func OnEditingChanged(sender: AnyObject) {
-        if(billField.text == "" || billField.text == "$"){
-            billField.text = "$"
+        if(billField.text == "" || billField.text == currencySymbol){
+            billField.text = currencySymbol
             if(hiddenFlag != true){
                 hiddenFlag = true
                 setHidden(hiddenFlag)
@@ -64,14 +67,14 @@ class ViewController: UIViewController {
             }
         }
         else{
-            billField.text = billField.text!.stringByReplacingOccurrencesOfString("$", withString: "")
+            billField.text = billField.text!.stringByReplacingOccurrencesOfString(currencySymbol, withString: "")
             var tipPercentages = [0.10, 0.15, 0.18]
             var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
             var billAmount=NSString(string: billField.text!).doubleValue
             var tip = billAmount * tipPercentage
             var total = tip + billAmount
-            tipLabel.text = String(format: "$%.2f",tip)
-            totalLabel.text = String(format: "$%.2f",total)
+            tipLabel.text = String(format: currencySymbol+"%.2f",tip)
+            totalLabel.text = String(format: currencySymbol+"%.2f",total)
             if(hiddenFlag != false)
             {
                 hiddenFlag = false
