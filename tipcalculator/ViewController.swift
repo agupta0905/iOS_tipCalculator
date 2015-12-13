@@ -25,12 +25,14 @@ class ViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         billField.text="$"
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         let defaults = NSUserDefaults.standardUserDefaults()
         let defaultTipPercentageIdx = defaults.integerForKey("defaultTipPercentageIdx")
         tipControl.selectedSegmentIndex=defaultTipPercentageIdx
         OnEditingChanged(self)
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

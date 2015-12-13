@@ -26,6 +26,7 @@ class SettingsViewController: UIViewController {
     @IBAction func onEditingChanged(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaltTipControl.selectedSegmentIndex, forKey: "defaultTipPercentageIdx")
+        defaults.synchronize()
     }
     /*
     // MARK: - Navigation
