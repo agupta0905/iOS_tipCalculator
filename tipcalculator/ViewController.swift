@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         billField.text="$"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaultTipPercentageIdx = defaults.integerForKey("defaultTipPercentageIdx")
+        tipControl.selectedSegmentIndex=defaultTipPercentageIdx
         OnEditingChanged(self)
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2620033D1C1DC7F900031B61 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2620033C1C1DC7F900031B61 /* SettingsViewController.swift */; };
 		26BF570F1C1CB80500020C17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BF570E1C1CB80500020C17 /* AppDelegate.swift */; };
 		26BF57111C1CB80500020C17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BF57101C1CB80500020C17 /* ViewController.swift */; };
 		26BF57141C1CB80500020C17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BF57121C1CB80500020C17 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2620033C1C1DC7F900031B61 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		26BF570B1C1CB80500020C17 /* tipcalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipcalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26BF570E1C1CB80500020C17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26BF57101C1CB80500020C17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				26BF57151C1CB80500020C17 /* Assets.xcassets */,
 				26BF57171C1CB80500020C17 /* LaunchScreen.storyboard */,
 				26BF571A1C1CB80500020C17 /* Info.plist */,
+				2620033C1C1DC7F900031B61 /* SettingsViewController.swift */,
 			);
 			path = tipcalculator;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				26BF57111C1CB80500020C17 /* ViewController.swift in Sources */,
 				26BF570F1C1CB80500020C17 /* AppDelegate.swift in Sources */,
+				2620033D1C1DC7F900031B61 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
