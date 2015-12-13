@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex=defaultTipPercentageIdx
         OnEditingChanged(self)
     }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        billField.becomeFirstResponder()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
